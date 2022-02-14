@@ -1,7 +1,7 @@
-## Documentación ejercicio semana 3 Storytelling
+# Documentación ejercicio semana 3 Storytelling
 Juan Felipe Uribe - 201329374
 
-Documento original:
+## Documento original:
 Este trabajo se realizó con la base de datos “Ask a Manager”, pueden revisar el formulario en https://www.askamanager.org/2021/04/how-much-money-do-you-make-4.html y los datos quedan alojados en un Google Sheets público que se actualiza constantemente: https://docs.google.com/spreadsheets/d/1IPS5dBSGtwYVbjsfbaMCYIWnOuRmJcbequohNxCyGVw/edit?resourcekey#gid=1625408792. 
 En la base original encontrarán las siguientes variables:
 •	Timestamp: Fecha en la cuál fue tomado el registro, tipo date.
@@ -29,7 +29,7 @@ En la base original encontrarán las siguientes variables:
 •	Gender: Género, tipo string.
 •	Race: Raza o grupo étnico, tipo string.
 
-Para realizar el reporte se agregaron las siguientes variables:
+## Para realizar el reporte se agregaron las siguientes variables:
 •	salario_anual: Es el salario anual convertido a pesos colombianos (COP) según la TRM actual, tipo int. 
 •	compensaciones: Son las compensaciones adicionales recibidas convertidas a pesos colombianos (COP) según la TRM actual, tipo int. 
 •	Total_ingresos: Suma de salario_anual y compensaciones. Son los ingresos anuales totales, tipo int.
@@ -37,7 +37,7 @@ Para realizar el reporte se agregaron las siguientes variables:
 •	Pais: Es el país en el que trabaja (homogenizado), tipo string. 
 •	Ciudad, es la ciudad en la que trabaja (homogenizado), tipo string.
 
-Para replicar el proceso, después de cargar los nuevos datos,  deben seguir los siguientes pasos: 
+## Para replicar el proceso, después de cargar los nuevos datos,  deben seguir los siguientes pasos: 
 1.	Crear la variable salario_anual: Esta variable se crea transformando la variable Annual Salary. primero hay que quitarle los puntos o comas que las personas suelen poner para separar mil, millón, etc. Posteriormente, teniendo ya una variable numérica, se multiplica por la TRM según la variable Currency. En este reporte se eliminaron las monedas diferentes a las usuales y se utilizó la siguiente conversión:
 {"USD":3917.52, "GBP": 5343.23, "CAD":3094.32, "EUR": 4471.69, "AUD/NZD": 2811.54,"CHF":4253.90, "ZAR":258.89, "SEK":422.01, "HKD":505.09, "JPY":34.13}
 Para el futuro se puede extender las monedas permitidas y cambiar la estos valores por la TRM se ese momento. Después se multiplicó por 1000 todos los valores inferiores a 12.000.000 (pues mucha gente pone números como 10 refiriéndose a 10.000).
